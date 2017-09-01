@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<title>Body Build</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/new.css">
+<body>
+
+<h2 class="w3-center">Body Building Slide</h2>
+
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="img/Legs.jpg" style="width:100%">
+  <img class="mySlides" src="img/Chest.jpg" style="width:100%">
+  <img class="mySlides" src="img/Shoulder.jpg" style="width:100%">
+  <img class="mySlides" src="img/Abs.jpg" style="width:100%">
+  <img class="mySlides" src="img/Bicep.jpg" style="width:100%">
+  <img class="mySlides" src="img/Tricep.jpg" style="width:100%">
+  <img class="mySlides" src="img/Back.jpg" style="width:100%">  
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<style>
+
+</style>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+</body>
+</html>
